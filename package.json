@@ -1,0 +1,25 @@
+{
+  "name": "js_e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.26.1",
+    "chalk": "^5.0.1",
+    "express": "^4.17.3",
+    "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "cron": "^1.8.2",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^3.2.3",
+    "redis": "^4.0.6"
+  }
+}

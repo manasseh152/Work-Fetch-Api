@@ -1,0 +1,135 @@
+:root {
+  --color-1: #ffffff;
+  --color-2: #ebebeb;
+  --color-3: #8E9297;
+  --color-4: #747f8d;
+  --color-5: #73767d;
+  --color-6: #3ba55d;
+  --color-7: #36393f;
+  --color-8: #32353B;
+  --color-9: #2f3136;
+  --color-10: #202225;
+
+  --clr-bg-1:var(--color-7);
+  --clr-bg-2: var(--color-9);
+  --clr-bg-3:var(--color-10);
+  --clr-txt-1:var(--color-1);
+  --clr-txt-2:var(--color-3);
+  --clr-txt-3:var(--color-4);
+}
+
+button,
+a {
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit  ;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-bg-2);
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(113, 108, 108);
+  border: 2px solid var(--clr-bg-2);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: 'n a m';
+  grid-template-columns: 50px 225px 1fr;
+  background-color: var(--clr-bg-1);
+  color: var(--clr-txt-1);
+}
+
+nav {
+  grid-area: n;
+  padding: 5px;
+  background-color: var(--clr-bg-3);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-li {
+  background-color: blue;
+  border-radius: 25%;
+}
+
+.nav-li a {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+aside {
+  overflow-y: scroll;
+  grid-area: a;
+  padding: 10px 5px;
+  background-color: var(--clr-bg-2) ;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+aside button {
+  color: inherit;
+  padding: 5px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-bg-1);
+  border: none;
+  cursor: pointer;
+}
+
+aside button:hover {
+  opacity: .8;
+}
+
+main {
+  grid-area: m;
+  padding: 5px 10px;
+}
